@@ -1,9 +1,9 @@
 .container {
     display: grid;
-    width: 20rem;
+    width: 25rem;
     height: auto;
-    grid-template-columns: repeat(4, auto);
-    grid-template-rows: repeat(5, auto);
+    grid-template-columns: repeat(4, 6.25rem);
+    grid-template-rows: repeat(6, auto);
     justify-content: center;
     align-items: center;
     margin: 5rem auto;
@@ -11,7 +11,6 @@
 }
 
 button {
-    width: 5rem;
     height: 2rem;
     border: 0.1rem solid gainsboro;
     color: gainsboro;
@@ -20,5 +19,15 @@ button {
 
 button[value="0"] {
     grid-column: span 2;
-    width: 10rem;
+}
+
+button[value="subtract"] {
+    grid-column: span 4;
+}
+
+input {
+    grid-column: span 4;
+    height: 2rem;
+    font-size: 2rem;
+    text-align: right;
 }
