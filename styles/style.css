@@ -1,0 +1,19 @@
+.container {
+    display: grid;
+    width: 20rem;
+    height: auto;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(5, auto);
+    justify-content: center;
+    align-items: center;
+    margin: 5rem auto;
+    border: 0.3rem solid slategray;
+}
+
+button {
+    width: 5rem;
+    height: 2rem;
+    border: 0.1rem solid gainsboro;
+    color: gainsboro;
+    background-color: slategray;
+}
