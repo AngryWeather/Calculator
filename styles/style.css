@@ -17,12 +17,8 @@ button {
     background-color: slategray;
 }
 
-button[value="0"] {
+button[value="0"], button[value="C"], button[value="equals"] {
     grid-column: span 2;
-}
-
-button[value="subtract"] {
-    grid-column: span 4;
 }
 
 input {
