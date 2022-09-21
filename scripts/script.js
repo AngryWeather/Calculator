@@ -19,4 +19,12 @@ function clearInput() {
     input.value = "";
 }
 
+function operate(operator, numOne, numTwo) {
+    operator(numOne, numTwo);
+}
+
+function add(numOne, numTwo) {
+    console.log("hello");
+}
+
 addEventToButtons();
