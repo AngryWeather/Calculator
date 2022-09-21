@@ -27,9 +27,15 @@ function checkOperator(operator) {
         switch (currentOperator.target.value) {
             case "+":
                 operate(add, numbers[0], numbers[1]);
-                activeResult = true;
+                break;
+            case "-":
+                operate(subtract, numbers[0], numbers[1]);
+              break;
+            case "=":
+                operate(currentOperator, numbers[0], numbers[1]);
                 break;
         }
+        activeResult = true;
     } else {
        activeResult = false;
     }
@@ -62,6 +68,10 @@ function operate(operator, numOne, numTwo) {
 
 function add(numOne, numTwo) {
     return numOne + numTwo;
+}
+
+function subtract(numOne, numTwo) {
+    return numOne - numTwo;
 }
 
 addEventToButtons();
