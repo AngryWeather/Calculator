@@ -1,9 +1,9 @@
 const container = document.querySelector(".container");
 
 function addEventToButtons() {
-    const buttons = document.querySelectorAll("button");
-    buttons.forEach(button => {
-        button.addEventListener("click", typeInput)
+    const typeButtons = document.querySelectorAll(".type");
+    typeButtons.forEach(typeButton => {
+        typeButton.addEventListener("click", typeInput)
     });
 }
 
