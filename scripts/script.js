@@ -2,6 +2,7 @@ const container = document.querySelector(".container");
 const input = document.querySelector("input");
 let numbers = [];
 let currentOperator;
+let activeResult = false;
 
 function addEventToButtons() {
     const clear = document.querySelector("#clear");
@@ -20,28 +21,35 @@ function addEventToButtons() {
 
 function checkOperator(operator) {
     numbers.push(Number(input.value));
-    clearInput();
+    clearScreen();
 
     if (numbers.length == 2) {
         switch (currentOperator.target.value) {
             case "+":
                 operate(add, numbers[0], numbers[1]);
+                activeResult = true;
                 break;
         }
     } else {
-       currentOperator = operator;
+       activeResult = false;
     }
-    console.log(numbers);
-    console.log(currentOperator.target.value);
-
+    currentOperator = operator;
 }
 
 function typeInput(e) {
+    if (activeResult) {
+        clearScreen();
+    }
     input.value += e.target.textContent;
 
 }
 
 function clearInput() {
+    input.value = "";
+    numbers = [];
+}
+
+function clearScreen() {
     input.value = "";
 }
 
@@ -49,8 +57,7 @@ function operate(operator, numOne, numTwo) {
     const result = operator(numOne, numTwo);
     numbers = [];
     numbers.push(result);
-    console.log(numbers);
-
+    input.value = result;
 }
 
 function add(numOne, numTwo) {
