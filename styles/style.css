@@ -17,3 +17,8 @@ button {
     color: gainsboro;
     background-color: slategray;
 }
+
+button[value="0"] {
+    grid-column: span 2;
+    width: 10rem;
+}
