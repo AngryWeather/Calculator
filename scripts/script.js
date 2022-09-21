@@ -34,6 +34,9 @@ function checkOperator(operator) {
             case "/":
                 operate(divide, numbers[0], numbers[1]);
                 break;
+            case "*":
+                operate(multiply, numbers[0], numbers[1]);
+                break;
             case "=":
                 operate(currentOperator, numbers[0], numbers[1]);
                 break;
@@ -48,6 +51,7 @@ function checkOperator(operator) {
 function typeInput(e) {
     if (activeResult) {
         clearScreen();
+        // activeResult = false;
     }
     input.value += e.target.textContent;
 
@@ -84,6 +88,10 @@ function divide(numOne, numTwo) {
     } else {
         return numOne / numTwo;
     }
+}
+
+function multiply(numOne, numTwo) {
+    return numOne * numTwo;
 }
 
 addEventToButtons();
