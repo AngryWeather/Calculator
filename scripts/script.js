@@ -31,6 +31,9 @@ function checkOperator(operator) {
             case "-":
                 operate(subtract, numbers[0], numbers[1]);
               break;
+            case "/":
+                operate(divide, numbers[0], numbers[1]);
+                break;
             case "=":
                 operate(currentOperator, numbers[0], numbers[1]);
                 break;
@@ -72,6 +75,15 @@ function add(numOne, numTwo) {
 
 function subtract(numOne, numTwo) {
     return numOne - numTwo;
+}
+
+function divide(numOne, numTwo) {
+    if (numTwo === 0) {
+        clearInput();
+        return "Error";
+    } else {
+        return numOne / numTwo;
+    }
 }
 
 addEventToButtons();
