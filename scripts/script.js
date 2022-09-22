@@ -51,7 +51,7 @@ function checkOperator(operator) {
 function typeInput(e) {
     if (activeResult) {
         clearScreen();
-        // activeResult = false;
+        activeResult = false;
     }
     input.value += e.target.textContent;
 

@@ -36,3 +36,9 @@ input {
 button:hover {
     background-color: grey;
 }
+
+.operator {
+    background-color: gainsboro;
+    border: 0.1rem solid slategrey;
+    color: slategrey;
+}
